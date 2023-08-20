@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
   },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ammodit-p/frontend-project-44.git"
