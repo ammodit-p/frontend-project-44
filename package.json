@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/ammodit-p/frontend-project-44#readme",
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.28.1",
+    "readline-sync": "1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0"
   }
 }
