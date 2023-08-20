@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
@@ -17,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ammodit-p/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/ammodit-p/frontend-project-44#readme"
+  "homepage": "https://github.com/ammodit-p/frontend-project-44#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
