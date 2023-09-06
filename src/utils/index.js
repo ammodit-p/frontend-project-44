@@ -1,5 +1,5 @@
-export function getRandomInt() {
-  return Math.floor(Math.random() * 100);
+export function getRandomInt(max) {
+  return Math.floor(Math.random() * (max ?? 100));
 }
 
 export function isEven(number) {
@@ -8,4 +8,10 @@ export function isEven(number) {
   }
 
   return false;
+}
+
+export function getRandomArrayElement(array) {
+  const max = array.length;
+  const randonIndex = getRandomInt(max);
+  return array[randonIndex];
 }
