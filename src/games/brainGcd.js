@@ -13,7 +13,7 @@ function gcd(num1, num2) {
     return min;
   }
 
-  return String(gcd(remainder, min));
+  return gcd(remainder, min);
 }
 
 let answer = '';
@@ -28,7 +28,7 @@ function getQuestion() {
 }
 
 function getCorrectAnswer() {
-  return answer;
+  return String(answer);
 }
 
 const Progression = {
