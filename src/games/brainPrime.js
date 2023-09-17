@@ -15,7 +15,7 @@ function getQuestion() {
   if (isPrime(num)) {
     answer = 'yes';
   } else {
-      answer = 'no'
+    answer = 'no';
   }
   return num;
 }

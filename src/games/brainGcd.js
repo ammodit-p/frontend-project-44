@@ -16,19 +16,18 @@ function gcd(num1, num2) {
   return String(gcd(remainder, min));
 }
 
-let answer = ''
+let answer = '';
 
 function getQuestion() {
   const num1 = getRandomInt();
   const num2 = getRandomInt();
 
-  answer = gcd(num1, num2)
+  answer = gcd(num1, num2);
 
   return `${num1} ${num2}`;
 }
 
 function getCorrectAnswer() {
-
   return answer;
 }
 
