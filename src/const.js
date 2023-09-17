@@ -3,7 +3,7 @@ export const GAME_NAMES = {
   even: 'even',
   gcd: 'gcd',
   progression: 'progression',
-  prime: 'prime'
+  prime: 'prime',
 };
 
 export const ROUNDS = 3;

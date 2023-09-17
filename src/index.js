@@ -12,7 +12,7 @@ const GAMES = {
   [GAME_NAMES.even]: Even,
   [GAME_NAMES.gcd]: Gcd,
   [GAME_NAMES.progression]: Progression,
-  [GAME_NAMES.prime]: Prime
+  [GAME_NAMES.prime]: Prime,
 };
 
 function play({ game }) {
