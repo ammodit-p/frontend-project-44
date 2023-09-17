@@ -16,17 +16,20 @@ function gcd(num1, num2) {
   return String(gcd(remainder, min));
 }
 
+let answer = ''
+
 function getQuestion() {
   const num1 = getRandomInt();
   const num2 = getRandomInt();
 
+  answer = gcd(num1, num2)
+
   return `${num1} ${num2}`;
 }
 
-function getCorrectAnswer(question) {
-  const numbersArray = question.split(' ');
+function getCorrectAnswer() {
 
-  return gcd(...numbersArray);
+  return answer;
 }
 
 const Progression = {
