@@ -29,10 +29,10 @@ function getCorrectAnswer(question) {
   return gcd(...numbersArray);
 }
 
-const Gcd = {
+const Progression = {
   introduction: 'Find the greatest common divisor of given numbers.',
   getQuestion,
   getCorrectAnswer,
 };
 
-export default Gcd;
+export default Progression;
