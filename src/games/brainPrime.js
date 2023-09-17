@@ -8,12 +8,14 @@ function isPrime(num) {
   return primes.includes(num);
 }
 
-let answer = 'no';
+let answer = '';
 
 function getQuestion() {
   const num = getRandomInt(100);
   if (isPrime(num)) {
     answer = 'yes';
+  } else {
+      answer = 'no'
   }
   return num;
 }
