@@ -19,7 +19,7 @@ function getQuestion() {
   const progression = generateProgression();
   const replaceIndex = getRandomInt(progression.length);
   answer = progression[replaceIndex];
-  progression[replaceIndex] = '...';
+  progression[replaceIndex] = '..';
   return progression.join(' ');
 }
 
