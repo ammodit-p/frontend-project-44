@@ -14,5 +14,8 @@ https://asciinema.org/connect/2ebfb7cd-c4c5-4e89-bca2-ab20702ea108
 ### Brain-gcd
 https://asciinema.org/connect/2ebfb7cd-c4c5-4e89-bca2-ab20702ea108
 
-### Brain-rogression
+### Brain-progression
 https://asciinema.org/connect/2ebfb7cd-c4c5-4e89-bca2-ab20702ea108
+
+### Brain-prime
+ https://asciinema.org/connect/2ebfb7cd-c4c5-4e89-bca2-ab20702ea108

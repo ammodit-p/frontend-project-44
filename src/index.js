@@ -3,14 +3,16 @@ import { start, askName, greetings } from './cli.js';
 import Even from './games/brainEven.js';
 import Calc from './games/brainCalc.js';
 import Gcd from './games/brainGcd.js';
-import Progression from './games/brainProgresion.js'
+import Progression from './games/brainProgresion.js';
+import Prime from './games/brainPrime.js';
 import { GAME_NAMES, ROUNDS } from './const.js';
 
 const GAMES = {
   [GAME_NAMES.calc]: Calc,
   [GAME_NAMES.even]: Even,
   [GAME_NAMES.gcd]: Gcd,
-  [GAME_NAMES.progression]: Progression
+  [GAME_NAMES.progression]: Progression,
+  [GAME_NAMES.prime]: Prime
 };
 
 function play({ game }) {
