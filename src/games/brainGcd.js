@@ -17,8 +17,8 @@ function gcd(num1, num2) {
 }
 
 function GcdGame() {
-  const num1 = getRandomInt();
-  const num2 = getRandomInt();
+  const num1 = getRandomInt(100);
+  const num2 = getRandomInt(100);
 
   return {
     question: `${num1} ${num2}`,
