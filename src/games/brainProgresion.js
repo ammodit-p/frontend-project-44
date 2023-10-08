@@ -1,10 +1,10 @@
 import { getRandomInt } from '../utils/index.js';
 
 function generateProgression({ start, step, length }) {
+  let n = start;
   const progression = Array.from({ length }, (() => {
-    const item = start;
-    start += step;
-    console.log('start', start);
+    const item = n;
+    n += step;
     return item;
   }));
 
