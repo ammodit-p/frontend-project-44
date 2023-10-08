@@ -15,7 +15,6 @@ const GAMES = {
 };
 
 function play({ game }) {
-  let loose = false;
   const Game = GAMES[game];
 
   console.log('Welcome to the Brain Games!');
@@ -30,20 +29,16 @@ function play({ game }) {
     console.log(`Question: ${questionText}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer === correctAnswer) {
-      console.log('Correct!');
-    } else {
+    if (answer !== correctAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      loose = true;
-      break;
+      console.log(`Let's try again, ${name}!`);
+      return;
+
+    } else {
+      console.log('Correct!');
     }
   }
-
-  if (loose) {
-    console.log(`Let's try again, ${name}!`);
-  } else {
-    console.log(`Congratulations, ${name}!`);
-  }
+  console.log(`Congratulations, ${name}!`);
 }
 
 export default play;
