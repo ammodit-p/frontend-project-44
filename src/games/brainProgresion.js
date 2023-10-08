@@ -1,11 +1,9 @@
 import { getRandomInt } from '../utils/index.js';
 
-function generateProgression() {
-  let start = getRandomInt(7);
-  const d = Math.max(getRandomInt(10), 1);
-  const progression = Array.from({ length: 10 }, (() => {
+function generateProgression({start, step, length}) {
+  const progression = Array.from({ length }, (() => {
     const item = start;
-    start += d;
+    start += step;
     console.log('start', start);
     return item;
   }));
@@ -16,7 +14,10 @@ function generateProgression() {
 let answer = '';
 
 function getQuestion() {
-  const progression = generateProgression();
+  const start = getRandomInt(7);
+  const step = Math.max(getRandomInt(10), 1);
+  const length = 10
+  const progression = generateProgression({ start, step, length });
   const replaceIndex = getRandomInt(progression.length);
   answer = progression[replaceIndex];
   progression[replaceIndex] = '..';
