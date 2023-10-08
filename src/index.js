@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import { start, askName, greetings } from './cli.js';
 import Even from './games/brainEven.js';
 import Calc from './games/brainCalc.js';
 import Gcd from './games/brainGcd.js';
@@ -19,9 +18,9 @@ function play({ game }) {
   let loose = false;
   const Game = GAMES[game];
 
-  start();
-  const name = askName();
-  greetings(name);
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log(Game.introduction);
 
   for (let i = 0; i < ROUNDS; i += 1) {

@@ -49,7 +49,8 @@ function getCorrectAnswer(question) {
     case OPERATIONS.multiply:
       answer = String(OPERATIONS_MAP[OPERATIONS.multiply](Number(num1), Number(num2)));
       break;
-    // no default
+    default:
+      throw new Error (`No such operation: ${operationArray[1]}`)
   }
 
   return answer;
