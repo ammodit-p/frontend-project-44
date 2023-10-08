@@ -1,11 +1,15 @@
 import { getRandomInt } from '../utils/index.js';
 
-const primes = [
-  2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,
-];
-
 function isPrime(num) {
-  return primes.includes(num);
+  if (num <= 1) {
+    return false
+  }
+ for (let i = 2; i < num; i++) {
+   if ((num % i ) === 0) {
+     return false
+   }
+ }
+ return true
 }
 
 let answer = '';
