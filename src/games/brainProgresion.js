@@ -1,6 +1,6 @@
 import { getRandomInt } from '../utils/index.js';
 
-function generateProgression({start, step, length}) {
+function generateProgression({ start, step, length }) {
   const progression = Array.from({ length }, (() => {
     const item = start;
     start += step;
@@ -11,27 +11,22 @@ function generateProgression({start, step, length}) {
   return progression;
 }
 
-let answer = '';
-
-function getQuestion() {
+function Progression() {
   const start = getRandomInt(7);
   const step = Math.max(getRandomInt(10), 1);
-  const length = 10
+  const length = 10;
   const progression = generateProgression({ start, step, length });
   const replaceIndex = getRandomInt(progression.length);
-  answer = progression[replaceIndex];
+  const answer = progression[replaceIndex];
   progression[replaceIndex] = '..';
-  return progression.join(' ');
+
+  return {
+    question: progression.join(' '),
+    answer: String(answer),
+  };
 }
 
-function getCorrectAnswer() {
-  return String(answer);
-}
-
-const Gcd = {
+export default {
   introduction: 'What number is missing in the progression?',
-  getQuestion,
-  getCorrectAnswer,
+  round: Progression,
 };
-
-export default Gcd;

@@ -23,20 +23,20 @@ function play({ game }) {
   console.log(Game.introduction);
 
   for (let i = 0; i < ROUNDS; i += 1) {
-    const questionText = Game.getQuestion();
-    const correctAnswer = Game.getCorrectAnswer(questionText);
+    const {
+      question,
+      answer,
+    } = Game.round();
 
-    console.log(`Question: ${questionText}`);
-    const answer = readlineSync.question('Your answer: ');
+    console.log(`Question: ${question}`);
+    const playerAnswer = readlineSync.question('Your answer: ');
 
-    if (answer !== correctAnswer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    if (playerAnswer !== answer) {
+      console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
-
-    } else {
-      console.log('Correct!');
     }
+    console.log('Correct!');
   }
   console.log(`Congratulations, ${name}!`);
 }

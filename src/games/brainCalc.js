@@ -24,22 +24,14 @@ const OPERATIONS_MAP = {
   [OPERATIONS.multiply]: multiply,
 };
 
-function getQuestion() {
+function Calc() {
   const num1 = getRandomInt();
   const num2 = getRandomInt();
   const operation = getRandomArrayElement(Object.values(OPERATIONS));
 
-  return `${num1} ${operation} ${num2}`;
-}
-
-function getCorrectAnswer(question) {
-  const operationArray = question.split(' ');
-  const num1 = operationArray[0];
-  const num2 = operationArray[2];
-
   let answer = '';
 
-  switch (operationArray[1]) {
+  switch (operation) {
     case OPERATIONS.minus:
       answer = String(OPERATIONS_MAP[OPERATIONS.minus](Number(num1), Number(num2)));
       break;
@@ -50,15 +42,16 @@ function getCorrectAnswer(question) {
       answer = String(OPERATIONS_MAP[OPERATIONS.multiply](Number(num1), Number(num2)));
       break;
     default:
-      throw new Error (`No such operation: ${operationArray[1]}`)
+      throw new Error(`No such operation: ${operation}`);
   }
 
-  return answer;
+  return {
+    question: `${num1} ${operation} ${num2}`,
+    answer,
+  };
 }
 
-const Calc = {
+export default {
   introduction: 'What is the result of the expression?',
-  getQuestion,
-  getCorrectAnswer,
+  round: Calc,
 };
-export default Calc;

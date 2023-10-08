@@ -1,13 +1,24 @@
-import { getRandomInt, isEven } from '../utils/index.js';
+import { getRandomInt } from '../utils/index.js';
+import { Answers } from '../const.js';
 
-const Answers = {
-  yes: 'yes',
-  no: 'no',
-};
+function isEven(number) {
+  if (number % 2 === 0) {
+    return true;
+  }
 
-const Even = {
+  return false;
+}
+
+function Even() {
+  const question = getRandomInt();
+
+  return {
+    question,
+    answer: isEven(question) ? Answers.yes : Answers.no,
+  };
+}
+
+export default {
   introduction: 'Answer "yes" if the number is even, otherwise answer "no".',
-  getQuestion: getRandomInt,
-  getCorrectAnswer: (number) => (isEven(number) ? Answers.yes : Answers.no),
+  round: Even,
 };
-export default Even;

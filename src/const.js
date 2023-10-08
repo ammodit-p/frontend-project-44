@@ -7,3 +7,8 @@ export const GAME_NAMES = {
 };
 
 export const ROUNDS = 3;
+
+export const Answers = {
+  yes: 'yes',
+  no: 'no',
+};

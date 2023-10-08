@@ -16,25 +16,17 @@ function gcd(num1, num2) {
   return gcd(remainder, min);
 }
 
-let answer = '';
-
-function getQuestion() {
+function GcdGame() {
   const num1 = getRandomInt();
   const num2 = getRandomInt();
 
-  answer = gcd(num1, num2);
-
-  return `${num1} ${num2}`;
+  return {
+    question: `${num1} ${num2}`,
+    answer: String(gcd(num1, num2)),
+  };
 }
 
-function getCorrectAnswer() {
-  return String(answer);
-}
-
-const Progression = {
+export default {
   introduction: 'Find the greatest common divisor of given numbers.',
-  getQuestion,
-  getCorrectAnswer,
+  round: GcdGame,
 };
-
-export default Progression;

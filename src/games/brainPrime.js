@@ -1,37 +1,28 @@
 import { getRandomInt } from '../utils/index.js';
+import { Answers } from '../const.js';
 
 function isPrime(num) {
   if (num <= 1) {
-    return false
+    return false;
   }
- for (let i = 2; i < num; i++) {
-   if ((num % i ) === 0) {
-     return false
-   }
- }
- return true
-}
-
-let answer = '';
-
-function getQuestion() {
-  const num = getRandomInt(100);
-  if (isPrime(num)) {
-    answer = 'yes';
-  } else {
-    answer = 'no';
+  for (let i = 2; i < num; i++) {
+    if ((num % i) === 0) {
+      return false;
+    }
   }
-  return num;
+  return true;
 }
 
-function getCorrectAnswer() {
-  return answer;
+function Prime() {
+  const question = getRandomInt(100);
+
+  return {
+    question,
+    answer: isPrime(question) ? Answers.yes : Answers.no,
+  };
 }
 
-const Prime = {
+export default {
   introduction: 'Answer "yes" if given number is prime. Otherwise answer "no".',
-  getQuestion,
-  getCorrectAnswer,
+  round: Prime,
 };
-
-export default Prime;
