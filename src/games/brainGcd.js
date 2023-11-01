@@ -1,4 +1,5 @@
 import { getRandomInt } from '../utils/index.js';
+import play from '../utils/play.js';
 
 function gcd(num1, num2) {
   if (num1 === num2) {
@@ -26,7 +27,7 @@ function GcdGame() {
   };
 }
 
-export default {
+export default play({
   introduction: 'Find the greatest common divisor of given numbers.',
   round: GcdGame,
-};
+});

@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import play from '../src/index.js';
-import { GAME_NAMES } from '../src/const.js';
+import brainProgression from '../src/games/brainProgresion.js';
 
-play({ game: GAME_NAMES.progression });
+brainProgression();

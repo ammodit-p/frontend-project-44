@@ -1,4 +1,5 @@
 import { getRandomInt } from '../utils/index.js';
+import play from '../utils/play.js';
 
 function generateProgression({ start, step, length }) {
   let n = start;
@@ -26,7 +27,7 @@ function Progression() {
   };
 }
 
-export default {
+export default play({
   introduction: 'What number is missing in the progression?',
   round: Progression,
-};
+});

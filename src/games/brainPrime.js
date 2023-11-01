@@ -1,5 +1,10 @@
 import { getRandomInt } from '../utils/index.js';
-import { Answers } from '../const.js';
+import play from '../utils/play.js';
+
+const Answers = {
+  yes: 'yes',
+  no: 'no',
+};
 
 function isPrime(num) {
   if (num <= 1) {
@@ -22,7 +27,7 @@ function Prime() {
   };
 }
 
-export default {
+export default play({
   introduction: 'Answer "yes" if given number is prime. Otherwise answer "no".',
   round: Prime,
-};
+});

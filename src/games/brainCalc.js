@@ -1,4 +1,5 @@
 import { getRandomInt, getRandomArrayElement } from '../utils/index.js';
+import play from '../utils/play.js';
 
 function plus(num1, num2) {
   return num1 + num2;
@@ -51,7 +52,7 @@ function Calc() {
   };
 }
 
-export default {
+export default play({
   introduction: 'What is the result of the expression?',
   round: Calc,
-};
+});
